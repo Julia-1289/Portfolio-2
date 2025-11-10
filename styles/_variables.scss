@@ -1,0 +1,19 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #ffffff;
+
+  --color-dark: #141414;
+
+  --color-accent: #0088dd;
+
+  --border: #{rem(1)} solid var(--color-accent);
+
+  --font-family-base: "DM Sans", sans-serif;
+  --font-family-accent: "Poppins", sans-serif;
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+}
