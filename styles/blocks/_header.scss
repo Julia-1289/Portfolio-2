@@ -1,0 +1,48 @@
+@use "../helpers" as *;
+
+.header {
+  border-bottom: 1px solid var(--color-accent);
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(30);
+    padding-block: rem(25);
+    font-family: var(--font-family-accent);
+  }
+
+  &__logo {
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: rem(25);
+    }
+
+    &-link {
+      font-size: rem(18);
+      font-weight: 500;
+
+      &.is-active {
+        position: relative;
+      }
+
+      &.is-active::before {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        content: "";
+        display: block;
+        height: rem(2);
+        width: 100%;
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

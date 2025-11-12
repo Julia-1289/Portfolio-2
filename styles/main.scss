@@ -4,8 +4,5 @@
 @use "utils";
 @use "globals";
 
-body {
-  p {
-    color: red;
-  }
-}
+@use "./blocks/header";
+@use "./blocks/author-info";

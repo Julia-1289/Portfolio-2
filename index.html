@@ -7,5 +7,44 @@
     <script src="./scripts/main.js" type="module" defer></script>
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="./index.html" class="header__logo">Федорова Юлия</a>
+        <nav class="header__menu hidden-mobile">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="./index.html" class="header__menu-link is-active"
+                >Проекты</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="./skills.html" class="header__menu-link">Навыки</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="./contacts.html" class="header__menu-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="author-info container">
+      <div class="author-info__wrapper">
+        <h1 class="author-info__title">
+          <strong>Привет, меня зовут <em>Юлия</em></strong>
+          <br />фронтенд-разработчик
+        </h1>
+        <div class="author-info__subtitle">
+          Создаю сайты, которые говорят о вас — от сердца к экрану
+        </div>
+        <a
+          href="/"
+          download="Федорова_Юлия_разработчик.pdf"
+          class="author-info__resume"
+        >
+          Скачать резюме
+        </a>
+      </div>
+    </section>
+  </body>
 </html>

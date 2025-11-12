@@ -42,8 +42,7 @@ h3,
 
 h1,
 .h1 {
-  @include fluid-text(48, 30);
-
+  @include fluid-text(40, 30);
   line-height: 1.4;
 }
 

@@ -1,19 +1,19 @@
 @use "helpers" as *;
 
 :root {
-  --color-light: #ffffff;
+  --color-light: #f8f8f8;
 
-  --color-dark: #141414;
+  --color-dark: #171718;
 
-  --color-accent: #0088dd;
+  --color-accent: #0088ff;
 
   --border: #{rem(1)} solid var(--color-accent);
 
   --font-family-base: "DM Sans", sans-serif;
   --font-family-accent: "Poppins", sans-serif;
 
-  --container-width: #{rem(1600)};
-  --container-padding-x: #{rem(16)};
+  --container-width: #{rem(1200)};
+  --container-padding-x: #{rem(15)};
 
   --transition-duration: 0.2s;
 }
