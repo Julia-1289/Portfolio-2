@@ -55,7 +55,8 @@ h2,
 
 h3,
 .h3 {
-  @include fluid-text(40, 24);
+  @include fluid-text(24, 20);
+  color: var(--color-light);
 }
 
 p {

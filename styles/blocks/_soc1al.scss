@@ -1,0 +1,19 @@
+@use "../helpers" as *;
+
+.soc1al {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: rem(30);
+    padding-top: rem(60);
+    padding-bottom: rem(30);
+  }
+}
+
+.footer {
+  &__extra {
+    text-align: center;
+    padding-bottom: rem(50);
+  }
+}
