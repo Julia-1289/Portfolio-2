@@ -8,6 +8,15 @@
     column-gap: rem(30);
     padding-top: rem(60);
     padding-bottom: rem(30);
+
+    @include laptop {
+      padding-top: rem(30);
+    }
+
+    @include mobile {
+      column-gap: rem(15);
+      padding-bottom: rem(15);
+    }
   }
 }
 
@@ -15,5 +24,9 @@
   &__extra {
     text-align: center;
     padding-bottom: rem(50);
+
+    @include laptop {
+      padding-bottom: rem(20);
+    }
   }
 }

@@ -1,21 +1,117 @@
 @use "../helpers" as *;
 
 .link-button {
-  display: inline-flex;
+  --color-button: var(--color-dark);
+
+  display: grid;
+  place-items: center;
   margin-top: rem(20);
-  align-items: center;
-  justify-content: center;
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
+
+  position: relative;
+  overflow: hidden;
+  height: 4rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--color-accent);
+  background-size: 400%;
+  color: var(--color-button);
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(82.3deg, #68f0ff 10.8%, #f947db 94.3%);
+    transition: all 0.475s;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &__content {
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    column-gap: rem(10);
+    padding-block: rem(12);
+
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 700;
+
+    &:hover {
+      color: var(--color-light);
+    }
+  }
+
+  &__light {
+    --color-button: var(--color-light);
+
+    background: var(--color-dark);
+  }
+}
+
+/*
+
+@use "../helpers" as *;
+
+.link-button {
+  --color-button: var(--color-dark);
+
+  display: grid;
+  place-items: center;
+  margin-top: rem(20);
+
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
   font-size: 15px;
   font-family: inherit;
   border: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  background: #3d3a4e;
+  background-size: 400%;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  color: var(--color-dark);
+  color: var(--color-button);
+  cursor: pointer;
+
+  &__light {
+    --color-button: var(--color-light);
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    column-gap: rem(10);
+
+    //   padding: rem(12) rem(20);
+
+    &--wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 3rem;
+      padding: 0 2rem;
+      border-radius: 1.5rem;
+      background: #3d3a4e;
+      background-size: 400%;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
 
   &:hover {
     color: var(--color-light);
@@ -26,15 +122,25 @@
 
   &::before {
     content: "";
-    width: 0;
-    height: 3em;
-    border-radius: 30em;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, #0f5cd8 0%, #f947db 100%);
-    transition: 0.5s ease;
-    display: block;
-    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
   }
 }
+*/

@@ -13,12 +13,23 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   letter-spacing: -0.01em;
-  color: var(--color-black);
+  color: var(--color-dark);
   background-color: var(--color-light);
+
+  &.dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+}
+
+body.dark .author-info__title {
+  color: var(--color-light);
 }
 
 main {
   flex-grow: 1;
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 h1,
@@ -27,7 +38,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 h1,
@@ -86,7 +97,7 @@ a {
 }
 
 :focus-visible {
-  outline: rem(2) dashed var(--color-accent);
+  outline: rem(4) dashed var(--color-accent);
   outline-offset: rem(4);
   transition-duration: 0s !important;
 }

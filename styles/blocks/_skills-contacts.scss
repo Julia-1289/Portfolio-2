@@ -1,0 +1,43 @@
+@use "../helpers" as *;
+
+.skills-contacts {
+  &__wrapper {
+    max-width: rem(580);
+    display: grid;
+    place-items: center;
+    gap: rem(40);
+    padding-top: rem(70);
+  }
+
+  &__title {
+    border: 5px dashed var(--color-accent);
+    color: var(--color-accent);
+    background-color: var(--color-light);
+    border-radius: 50%;
+    padding: rem(20);
+
+    &:hover {
+      scale: 1.1;
+      background: linear-gradient(82.3deg, #68f0ff 10.8%, #f947db 94.3%);
+      transition-duration: 0.4s;
+      color: var(--color-light);
+      border: 5px solid var(--color-light);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+    text-align: center;
+    padding-bottom: rem(30);
+  }
+
+  &__text1 {
+    margin-bottom: rem(20);
+  }
+
+  &__label {
+    margin-bottom: rem(20);
+  }
+}

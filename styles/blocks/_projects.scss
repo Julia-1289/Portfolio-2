@@ -1,8 +1,6 @@
 @use "../helpers" as *;
 
 .projects {
-  background-color: var(--color-dark);
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -12,11 +10,14 @@
   }
 
   &__title {
+    text-align: center;
     color: var(--color-light);
   }
 
   &__list {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: rem(30);
   }

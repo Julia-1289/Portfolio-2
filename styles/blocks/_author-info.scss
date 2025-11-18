@@ -12,10 +12,15 @@
     align-items: center;
     row-gap: rem(20);
     margin-block: rem(250);
+
+    @include mobile {
+      margin-block: rem(200);
+    }
   }
 
   &__title {
     text-align: center;
+    color: var(--color-dark);
 
     em {
       color: var(--color-accent);

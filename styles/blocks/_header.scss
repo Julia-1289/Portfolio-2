@@ -6,7 +6,7 @@
   &__inner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     column-gap: rem(30);
     padding-block: rem(25);
@@ -14,7 +14,7 @@
   }
 
   &__logo {
-    font-size: rem(24);
+    @include fluid-text(24, 18);
     font-weight: 700;
   }
 

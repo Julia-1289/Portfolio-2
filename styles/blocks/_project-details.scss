@@ -1,1 +1,19 @@
 @use "../helpers" as *;
+
+.project-details {
+  &__wrapper {
+    display: grid;
+    place-items: center;
+    row-gap: rem(30);
+    margin-block: rem(70);
+  }
+
+  &__description {
+    color: var(--color-light);
+  }
+
+  &__text {
+    @include fluid-text(18, 16);
+    font-weight: 700;
+  }
+}
