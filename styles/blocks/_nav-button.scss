@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.nav-button {
+  display: inline;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: rem(38);
+  height: 0.3rem;
+  background-color: var(--color-dark);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  transition-duration: var(--transition-duration);
+}
+
+.change .bar1 {
+  transform: translate(0, rem(10)) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+  width: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -1rem) rotate(45deg);
+}

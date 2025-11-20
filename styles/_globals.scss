@@ -22,14 +22,58 @@ body {
   }
 }
 
-body.dark .author-info__title {
-  color: var(--color-light);
+body.dark {
+  .h1 {
+    color: var(--color-light);
+  }
+  .header {
+    background-color: #252526;
+
+    &__menu {
+      color: var(--color-light);
+
+      @include mobile {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+      }
+    }
+  }
+
+  main {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: var(--color-light);
+  }
+
+  .author-info__title {
+    color: var(--color-light);
+  }
+
+  .project-details {
+    &__description {
+      color: var(--color-light);
+    }
+  }
+
+  .footer__soc1als {
+    background-color: #252526;
+  }
 }
 
 main {
   flex-grow: 1;
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+
+  &.projects {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
 }
 
 h1,
@@ -38,7 +82,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 h1,

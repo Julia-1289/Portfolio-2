@@ -11,6 +11,12 @@
     column-gap: rem(30);
     padding-block: rem(25);
     font-family: var(--font-family-accent);
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: 6fr 1fr 1fr;
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -19,29 +25,65 @@
   }
 
   &__menu {
+    &.show {
+      @include mobile {
+        transform: translateY(0);
+      }
+    }
+
+    @include mobile {
+      position: absolute;
+      z-index: 10;
+      inset: 0;
+      background-color: var(--color-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
     &-list {
       display: flex;
       align-items: center;
       gap: rem(25);
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
 
     &-link {
+      position: relative;
+      display: inline-block;
       font-size: rem(18);
       font-weight: 500;
+      cursor: pointer;
 
-      &.is-active {
-        position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: rem(2);
+        width: 0;
+        background-color: var(--color-accent);
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease, left 0.3s ease;
       }
 
-      &.is-active::before {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        content: "";
-        display: block;
-        height: rem(2);
+      &.is-active {
+        &::after {
+          width: 100%;
+          left: 0;
+          transform: none;
+        }
+      }
+
+      &:not(.is-active):hover::after {
         width: 100%;
-        background-color: var(--color-accent);
+        left: 0;
+        transform: none;
       }
     }
   }

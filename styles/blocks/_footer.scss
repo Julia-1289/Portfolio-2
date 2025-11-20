@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.footer {
+  &__extra {
+    text-align: center;
+    padding-bottom: rem(50);
+
+    @include laptop {
+      padding-bottom: rem(20);
+    }
+  }
+}

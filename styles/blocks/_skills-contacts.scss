@@ -12,7 +12,7 @@
   &__title {
     border: 5px dashed var(--color-accent);
     color: var(--color-accent);
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
     border-radius: 50%;
     padding: rem(20);
 
@@ -39,5 +39,14 @@
 
   &__label {
     margin-bottom: rem(20);
+  }
+}
+
+.contacts {
+  &__link {
+    color: var(--color-accent);
+  }
+  &__info {
+    color: var(--color-accent);
   }
 }
