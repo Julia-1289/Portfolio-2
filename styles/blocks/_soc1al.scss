@@ -10,6 +10,10 @@
     padding-bottom: rem(30);
     border-top: 1px solid var(--color-accent);
 
+    &__item {
+      @include square(45px);
+    }
+
     @include laptop {
       padding-top: rem(30);
     }

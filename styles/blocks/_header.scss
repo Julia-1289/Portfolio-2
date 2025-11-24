@@ -59,6 +59,7 @@
       font-size: rem(18);
       font-weight: 500;
       cursor: pointer;
+      padding-block: rem(10);
 
       &::after {
         content: "";
